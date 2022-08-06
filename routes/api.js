@@ -11,12 +11,12 @@ var cheerio = require('cheerio');
 var request = require('request');
 var router  = express.Router();
 nottext: {message: 'MASUKKAN TEXT' }
-notapikey: {message: 'APIKEY SALAH' }
+notapikey: {message: 'APIKEY BENAR' }
 
 // WALLPAPER
 router.get('/wallml', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+if(apikeyInput != apikey) return res.json({message: 'APIKEY BENAE' })
 fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallml`))
 .then(response => response.json())
 .then(data => { var result = data;
@@ -24,7 +24,7 @@ res.json({ result })})})
 
 router.get('/wallrandom', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+if(apikeyInput != apikey) return res.json({message: 'APIKEY BENAR' })
 fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallrandom`))
 .then(response => response.json())
 .then(data => { var result = data;
@@ -32,7 +32,7 @@ res.json({ result })})})
 
 router.get('/wallcode', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+if(apikeyInput != apikey) return res.json({message: 'APIKEY BENAR' })
 fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallcode`))
 .then(response => response.json())
 .then(data => { var result = data;
@@ -40,7 +40,7 @@ res.json({ result })})})
 
 router.get('/wallneon', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+if(apikeyInput != apikey) return res.json({message: 'APIKEY BENAR' })
 fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallneon`))
 .then(response => response.json())
 .then(data => { var result = data;
@@ -48,7 +48,7 @@ res.json({ result })})})
 
 router.get('/wallpubg', async (req, res, next) => {  
 var apikeyInput = req.query.apikey
-if(apikeyInput != apikey) return res.json({message: 'APIKEY SALAH' })
+if(apikeyInput != apikey) return res.json({message: 'APIKEY BENAR' })
 fetch(encodeURI(`https://myselfff.herokuapp.com/docs/wallpaper/wallpubg`))
 .then(response => response.json())
 .then(data => { var result = data;
